@@ -10,3 +10,47 @@
   background-color: #cf8f2e;
   box-shadow: 0 2px 1px #cccccc;
 }
+
+.OrderButton {
+  padding: 15px 30px;
+
+  font-family: inherit;
+  font-size: 1.2em;
+  color: #966909;
+
+  border: 1px solid #966909;
+  background-color: #dad735;
+  box-shadow: 2px 2px 2px #966909;
+  cursor: pointer;
+}
+
+.OrderButton:hover, .OrderButton:active {
+  color: #966909;
+
+  border: 1px solid #966909;
+  background-color: #a0dB41;
+}
+
+.OrderButton:disabled {
+  color: #888888;
+
+  border: 1px solid #cccccc;
+  background-color: #c7c6c6;
+  cursor: not-allowed;
+}
+
+.OrderButton:not(:disabled) {
+  animation: enable 0.3s linear;
+}
+
+@keyframes enable {
+  0% {
+      transform: scale(1);
+  }
+  60% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
